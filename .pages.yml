@@ -10,7 +10,7 @@ content:
     view:
       fields: [ image, title ]
     fields:
-      - { name: image, label: Cover Image, type: image, options: {extensions: [png, jpg, jpeg, webp, gif]}}
+      - { name: image, label: Cover Image, type: image, options: {extensions: [png, jpg, jpeg, webp, gif], media: images}}
       - { name: title, label: Title, type: string, required: true }
       - { name: description, label: Description, type: string }
       - { name: date, 
