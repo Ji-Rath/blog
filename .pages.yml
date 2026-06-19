@@ -7,8 +7,13 @@ content:
     filename:
       template: "{year}-{month}-{day}-{primary}.md"
       field: false
+    view:
+      fields: [ cover, title ]
     fields:
-      - name: title
-        type: string
-      - name: body
-        type: rich-text
+      - { name: layout, type: string, hidden: true, default: post }
+      - { name: cover, label: Cover image, type: image }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: categories, label: Categories, type: select, options: { values: [ "misc", "junk" ] } }
+      - { name: author, label: Authors, type: string, list: true }
+      - { name: meta, label: Meta, type: string }
+      - { name: body, label: Body, type: rich-text }
