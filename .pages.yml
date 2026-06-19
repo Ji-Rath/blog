@@ -10,14 +10,14 @@ content:
     view:
       fields: [ cover, title ]
     fields:
-      - { name: cover, label: Cover image, type: image }
+      - { name: cover, label: Cover Image, type: image }
       - { name: title, label: Title, type: string, required: true }
       - { name: date, 
           label: Date,
           type: date,
           options: {
             format: yyyy-MM-dd }}
-      - { name: categories, label: Categories, type: select, options: { values: [ "misc", "junk" ] } }
-      - { name: author, label: Authors, type: string, list: true }
-      - { name: meta, label: Meta, type: string }
+      - { name: categories, label: Categories, type: select, options: { values: [ "gameplay", "networking", "AI" ] } }
+      - { name: tags, label: Tags, type: string }
+      - { name: description, label: Description, type: string }
       - { name: body, label: Body, type: rich-text }
