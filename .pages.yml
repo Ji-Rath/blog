@@ -10,7 +10,7 @@ content:
     view:
       fields: [ image, title ]
     fields:
-      - { name: image, label: Cover Image, type: image, options: {extensions: [png, jpg, jpeg, webp, gif], media: images}}
+      - { name: image, label: Cover Image, type: image, options: {extensions: [png, jpg, jpeg, webp, gif]}}
       - { name: title, label: Title, type: string, required: true }
       - { name: description, label: Description, type: string }
       - { name: pin, label: Pin, type: boolean }
@@ -19,6 +19,6 @@ content:
           type: date,
           options: {
             format: yyyy-MM-dd }}
-      - { name: categories, label: Categories, type: select, options: { values: [ "gameplay", "networking", "AI" ] } }
+      - { name: categories, label: Categories, type: select, options: { values: [ "Gameplay", "Networking", "AI" ] } }
       - { name: tags, label: Tags, type: string }
       - { name: body, label: Body, type: rich-text }
