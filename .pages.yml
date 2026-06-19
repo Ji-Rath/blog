@@ -16,7 +16,6 @@ content:
           label: Date,
           type: date,
           options: {
-            time: true,
             format: yyyy-MM-dd }}
       - { name: categories, label: Categories, type: select, options: { values: [ "misc", "junk" ] } }
       - { name: author, label: Authors, type: string, list: true }
