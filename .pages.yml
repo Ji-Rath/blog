@@ -8,9 +8,9 @@ content:
       template: "{year}-{month}-{day}-{primary}.md"
       field: false
     view:
-      fields: [ cover, title ]
+      fields: [ image, title ]
     fields:
-      - { name: cover, label: Cover Image, type: image }
+      - { name: image, label: Cover Image, type: image }
       - { name: title, label: Title, type: string, required: true }
       - { name: description, label: Description, type: string }
       - { name: date, 
