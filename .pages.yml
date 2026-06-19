@@ -21,4 +21,6 @@ content:
             format: yyyy-MM-dd }}
       - { name: categories, label: Categories, type: select, options: { values: [ "Gameplay", "Networking", "AI" ] } }
       - { name: tags, label: Tags, type: string }
-      - { name: body, label: Body, type: rich-text }
+      - { name: body, label: Body, type: rich-text, options: {
+            media: content_images,
+            path: "media/{primary}" }}
