@@ -6,7 +6,7 @@ content:
     path: _posts
     filename:
       template: "{year}-{month}-{day}-{primary}.md"
-      field: create
+      field: false
     fields:
       - name: title
         type: string
