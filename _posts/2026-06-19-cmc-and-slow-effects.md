@@ -13,8 +13,7 @@ The character movement component is a complex system used for handling smooth se
 Movement slowing effects on the surface seems like an easy problem - just slow the player down...and in a single player game that is mostly the case. It begins to fall apart once you are in a networked environment.
 
 > It should also be noted that fixed/predictable speed effects like sprinting can be handled completely in the CMC (see More Information).
-
-{: .prompt-info }
+> {: .prompt-info }
 
 This is because the client will have authority over whether it wants to sprint or not, and the speed effect can be pre-determined. The issue covered here mainly pertains to dynamic slow/speed effects and effects that cannot be predicted.
 
@@ -31,18 +30,16 @@ What I will outline is simply how I solved the problem for my use case. Every ga
 - Add a bit of leniency to the CMC. Override `ServerExceedsAllowablePositionError()` to prevent sending corrections to the client (within a reasonable limit). Consider enabling `bServerAcceptClientAuthoritativePosition`  so that the server will accept a slightly incorrect client position.
 
 > Enabling  `bServerAcceptClientAuthoritativePosition` can allow clients to exploit and cheat. Use sparingly and enable temporarily. ex. Enabled only when we recently applied a movement buff/debuff.
-
-{: .prompt-note }
+> {: .prompt-note }
 
 > When we give the client semi-authority over their position and apply a slow effect on the server, The client's move speed will not instantly change - essentially delaying any move effect.
-
-{: .prompt-info }
+> {: .prompt-info }
 
 - If you do not care about client cheats, like in some co-op games, you can enable `bServerAcceptClientAuthoritativePosition` and `bIgnoreClientMovementErrorChecksAndCorrection` which effectively gives the client full authority over their position.
 
 # More Information
 
-- [https://youtu.be/tSVcRbfK8X8?si=kYESkdcnstc6BlZq](https://youtu.be/tSVcRbfK8X8?si=kYESkdcnstc6BlZq)
+- [Best Practices for Networked Movement | Unreal Fest Bali 2025](https://youtu.be/tSVcRbfK8X8?si=kYESkdcnstc6BlZq)
 - [tranek/GASDocumentation - Question 4](https://github.com/tranek/GASDocumentation#1111-community-questions-1)
-- [https://youtu.be/17D4SzewYZ0?si=rqABFp2FeMb5jtGN](https://youtu.be/17D4SzewYZ0?si=rqABFp2FeMb5jtGN)
+- [CMC Sprinting Setup and Guide](https://youtu.be/17D4SzewYZ0?si=rqABFp2FeMb5jtGN)
 
