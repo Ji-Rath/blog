@@ -30,7 +30,7 @@ What I will outline is simply how I solved the problem for my use case. Every ga
 - Add a bit of leniency to the CMC. Override `ServerExceedsAllowablePositionError()` to prevent sending corrections to the client (within a reasonable limit). Consider enabling `bServerAcceptClientAuthoritativePosition`  so that the server will accept a slightly incorrect client position.
 
 > Enabling  `bServerAcceptClientAuthoritativePosition` can allow clients to exploit and cheat. Use sparingly and enable temporarily. ex. Enabled only when we recently applied a movement buff/debuff.
-{: .prompt-note }
+{: .prompt-warning }
 
 > When we give the client semi-authority over their position and apply a slow effect on the server, The client's move speed will not instantly change - essentially delaying any move effect.
 {: .prompt-info }
