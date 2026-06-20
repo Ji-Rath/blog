@@ -39,7 +39,7 @@ What I will outline is simply how I solved the problem for my use case. Every ga
 
 # More Information
 
-- [Best Practices for Networked Movement | Unreal Fest Bali 2025](https://youtu.be/tSVcRbfK8X8?si=kYESkdcnstc6BlZq)
+- [Best Practices for Networked Movement Unreal Fest Bali 2025](https://youtu.be/tSVcRbfK8X8?si=kYESkdcnstc6BlZq)
 - [tranek/GASDocumentation - Question 4](https://github.com/tranek/GASDocumentation#1111-community-questions-1)
 - [CMC Sprinting Setup and Guide](https://youtu.be/17D4SzewYZ0?si=rqABFp2FeMb5jtGN)
 
